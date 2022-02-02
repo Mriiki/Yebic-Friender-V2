@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">My Application2</string>
+    <string name="todo">TODO</string>
+    <string name="yebic_kyuzz">YEBIC KYUZZ</string>
+    <string name="starteuu">STARTEUU!</string>
+    <string name="yebic_kyuzzz">YEBIC KYUZZZ</string>
+    <string name="sample_question">Sample question</string>
+    <string name="submiteu">SUBMITEU</string>
+    <string name="you_scored">YOU SCORED</string>
+    <string name="_10_10">10/10</string>
+    <string name="developed_by_mrinal_asj_workshop_by_gdsc_mce">Developed by Mrinal(ASJ workshop by GDSC MCE)</string>
+    <string name="lessgo_homee">LESSGO HOMEE</string>
+    <string name="question_no">Question No:</string>
+    <string name="points">Points :</string>
+    <string name="button">Button</string>
+    <string name="textview">TextView</string>
+    <string name="hangman">HANGMAN</string>
+    <string name="play">PLAY</string>
+    <string name="you_lost">You Lost!</string>
+    <string name="you_lose">You lose!</string>
+    <string name="game">game</string>
+    <string name="home">Home</string>
+    <string name="radiobutton">RadioButton</string>
+    <string name="highest_15">Highest; 15</string>
+    <string name="meh_10">Meh: 10</string>
+    <string name="lowest_5">Lowest: 5</string>
+    <string name="score">SCORE</string>
+    <string name="bonus">Bonus:)</string>
+
+
+</resources>
