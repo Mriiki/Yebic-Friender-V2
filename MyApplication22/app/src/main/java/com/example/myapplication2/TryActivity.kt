@@ -1,5 +1,6 @@
 package com.example.myapplication2
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.ImageButton
@@ -8,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 
 private const val TAG = "TryActivity"
 class TryActivity : AppCompatActivity() {
+
     private lateinit var button1: ImageButton
     private lateinit var button2: ImageButton
     private lateinit var button3: ImageButton
@@ -38,6 +40,7 @@ class TryActivity : AppCompatActivity() {
         if (actionBar != null) {
             actionBar.title = "Try Activity"
         }
+
         actionBar?.setDisplayHomeAsUpEnabled(true)
 
         button1 = findViewById(R.id.imageButton2)
