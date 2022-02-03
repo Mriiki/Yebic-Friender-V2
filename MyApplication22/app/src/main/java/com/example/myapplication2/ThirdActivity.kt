@@ -11,6 +11,7 @@ class ThirdActivity : AppCompatActivity() {
     private lateinit var backbutton : Button
     private lateinit var finalText : TextView
     private lateinit var homebutton : Button
+    private var scoreINT : Int = 0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_third)
@@ -21,12 +22,13 @@ class ThirdActivity : AppCompatActivity() {
         homebutton = findViewById(R.id.button5)
         backbutton.setOnClickListener{
             val intent = Intent(this ,TryActivity::class.java )
+            intent.putExtra("scoreINT", scoreINT)
             startActivity(intent)
 
         }
 
         scoreboard.text =  (intent.getStringExtra("score" ) + "/90")
-        var scoreINT = intent.getStringExtra("score" )?.toInt()
+        var scoreINT = intent.getIntExtra("score", 0)
         if (scoreINT != null) {
             if(scoreINT <= 40){
                 finalText.text = "Plis dont talk to me -_-"

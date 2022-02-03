@@ -169,7 +169,7 @@ class SecondActivity : AppCompatActivity() {
             } else {
                 //go to next page
                 var intent = Intent(this, ThirdActivity::class.java)
-                intent.putExtra("score", score.toString())
+                intent.putExtra("score", score)
                 startActivity(intent)
             }
         }
