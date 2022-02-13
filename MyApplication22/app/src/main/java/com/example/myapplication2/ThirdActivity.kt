@@ -11,6 +11,8 @@ class ThirdActivity : AppCompatActivity() {
     private lateinit var backbutton : Button
     private lateinit var finalText : TextView
     private lateinit var homebutton : Button
+    private var grabbedValue = ""
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_third)
@@ -19,14 +21,17 @@ class ThirdActivity : AppCompatActivity() {
         scoreboard = findViewById(R.id.textView5)
         backbutton = findViewById(R.id.button3)
         homebutton = findViewById(R.id.button5)
-        backbutton.setOnClickListener{
-            val intent = Intent(this ,TryActivity::class.java )
-            startActivity(intent)
 
+        grabbedValue = intent.getStringExtra("score" )!!
+
+        if (savedInstanceState != null){
+            grabbedValue = savedInstanceState.getString("score")!!
         }
 
-        scoreboard.text =  (intent.getStringExtra("score" ) + "/90")
-        var scoreINT = intent.getStringExtra("score" )?.toInt()
+
+        scoreboard.text =  (grabbedValue + "/90")
+        var scoreINT = grabbedValue?.toInt()
+
         if (scoreINT != null) {
             if(scoreINT <= 40){
                 finalText.text = "Plis dont talk to me -_-"
@@ -43,13 +48,22 @@ class ThirdActivity : AppCompatActivity() {
             }
         }
 
-
-
-        homebutton.setOnClickListener{
-            val intent = Intent(this, MainActivity::class.java)
+        backbutton.setOnClickListener{
+            // save Activity state
+            val intent = Intent(this ,TryActivity::class.java )
             startActivity(intent)
 
         }
 
+        homebutton.setOnClickListener{
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
+
+    }
+
+    override fun onSaveInstanceState(savedInstanceState: Bundle) {
+        savedInstanceState.putString("score",grabbedValue)
+        super.onSaveInstanceState(savedInstanceState)
     }
 }
