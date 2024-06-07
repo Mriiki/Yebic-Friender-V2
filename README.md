@@ -1,0 +1,1 @@
+A fun Android app built with Kotlin in Android Studio that quizzes users with 10 questions about you and decides whether they are your friend or best friend. The app also includes a small puzzle at the end for extra fun.
